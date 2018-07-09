@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script  src='./js/deytail.js'></script>
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <div class="header-top">
+            <a href="#" class="left">
+                <img src="./images/logo (2).png" alt="">
+            </a>
+            <a href="#" class="right">
+                <img src="./images/download.png" alt="">
+            </a>
+        </div>
+
+        <div class="search-self">
+            <input type="search" class="search-input" placeholder="请输入你想比价的商品">
+            <button type="button" class="search-btn">搜索</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-in">
+            <div class="listmenu">
+                <div class="screen">
+                    <div class="menu">
+                        <a href="">首页&gt;</a>
+                        <a href="">全部分类&gt;</a>
+                        <a href="">菜单&gt;</a>
+                    </div>
+
+                    <button class="">筛选</button>
+                </div>
+                <div class="detail">
+                    <div class="detal-img">
+                        <a class="storp">
+                            <span>收藏</span>
+                        </a>
+                        <img src="./images/computer.jpg" alt="">
+                        <p>格力(GREE) KFR-35GW/(35592)FNhDa-A3 品圆 大1.5匹 冷暖变频 除甲醛 壁挂式空调</p>
+                    </div>
+                    <div class="about">
+                        <div class="price">
+                                <p class="p-left">
+                                        <span class="low-price">当前最低：</span>
+                                        <span>￥3149元</span>
+                                </p>
+                                <p class="p-right">
+                                        <span class="youxuan">优选评论：</span>
+                                        <span>7921条</span>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bijia">
+            <p class="bijiashopping">比价购买</p>
+            <p class="number">比价购买</p>
+            <p class="youxuanpl">比价购买</p>
+        </div>
+        <div class="shopcontury">
+            <div class="shopleft">
+                <img src="./images/jd_20.jpg" alt="">
+                <p>京东商城</p>
+                <span>自营</span>
+            </div>
+            <div class="shopright">
+                <span>￥3399元</span><span>&gt;</span>
+            </div>
+        </div>
+        <div class="title">优选网友评价</div>
+        <div class = "textpingjia">
+            <div class="usermessage">
+                <div class="leftmessage">
+                    <p>nanme</p>
+                    <img src="" alt="">
+                </div>
+                <div class="date">
+                    <p>2017/6/6</p>
+                    <p>购买自：京东商城</p>
+                </div>
+            </div>
+            <p class="usertext">京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东京东</p>
+                
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script id="productmessage" type="text/html">
+    {{each result}}
+            <a class="storp">
+                <span>收藏</span>
+            </a>
+            {{#$value.productImg}}
+            <p>{{$value.productName}}</p>
+    {{/each}}
+</script>
+
+<script id="usermessage" type="text/html">
+    {{each result}}
+    <div class="usermessage">
+            <div class="leftmessage">
+                <p>{{$value.comName}}</p>
+                <img src="" alt="">
+            </div>
+            <div class="date">
+                <p>{{$value.comTime
+                    }}</p>
+                <p>{{$value.comFrom}}</p>
+            </div>
+        </div>
+        <p class="usertext">{{$value.comContent}}</p>
+    {{/each}}
+</script>

@@ -1,0 +1,313 @@
+/* CSS Document */
+
+@function pr($p) {
+    @return $p/64+rem;
+}
+
+/* CSS Document */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+address,
+cite,
+dfn,
+em,
+var,
+i {
+    font-style: normal;
+}
+
+body {
+    font-family: 'Microsoft Yahei', 'simsun', 'arial', 'tahoma';
+    background-color: #fff;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+    background: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+:focus {
+    outline: none;
+}
+
+.clearfix {
+    clear: both;
+    content: "";
+    display: block;
+    overflow: hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+html,
+body {
+    height: 100%;
+    margin:0 auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    header {
+        flex-basis: pr(150);
+        padding: 0 pr(10);
+        height:pr(200) ;
+        .header-top {
+          padding:0 pr(10) ;
+          background-color: #ff841d;
+          flex-basis:pr(100) ;
+          height:pr(100) ;
+          display: flex ;
+          justify-content: space-between ;
+          align-items: center ;
+        .left {
+            width: 60%;
+            text-align: center ;
+            img{
+                width:100% ;
+            }
+        }
+        .right {
+            width: 20%;
+            text-align: center ;
+            img {
+                width: 40%;
+            }
+        }
+      }
+        .search-self {
+          flex-basis: pr(50) ;
+            margin: 10px 0;
+            display: flex;
+            height: pr(50);
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f1f1f1;
+            border-radius: pr(40);
+            input.search-input {
+                margin: 0;
+                padding-left: 10px;
+                height: 100%;
+                background: none;
+                color: #757575;
+                text-align: left;
+            }
+            button.search-btn {
+                margin: 0;
+                padding: 0;
+                width: pr(100);
+                height: 100% ;
+                border-radius: pr(40);
+                background-color: #ff841d;
+                color: #fff;
+            }
+        }
+    }
+    main {
+        flex: 1;
+        background-color: #fff;
+        .main-in {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            .mui-scroll-wrapper {
+                width: 100%;
+                .mui-scroll {
+                    width: 100%;
+                    .list {
+                        border-top-color: #f1f1f1;
+                        width: 100%;
+                        border: 1px solid #ccc;
+                        border-radius: pr(10);
+                        .box-list{
+
+                          li.list-li {
+                            border-bottom: 1px solid #ccc;
+                            display: flex;
+                            
+                            justify-content: space-between;
+                            align-items: center;
+                            height: pr(50);
+                            padding: 0 10px;
+
+                            a {
+                              color:#000000 ;
+                              font-weight: bold ;
+                            }
+                            .list-li-a {
+                              transform:rotate(-90deg) ;
+                              
+                            }
+                            .active{
+                              transform: rotate(90deg) ;
+                            }
+                        }
+                        .product{
+                          background-color: #ebebeb;
+                          display: none ;
+
+                          ul{
+                            display: flex ;
+                            flex-wrap: wrap ;
+                            align-items: center ;
+                            text-align: center ;
+                            border-top: 1px solid #ccc;
+                            
+
+                            li{
+                              border: pr(1) solid #ccc;
+                              width:33.6% ;
+                              margin:pr(-1);
+                              display: flex ;
+                              font-size:pr(18) ;
+                              height:pr(30) ;
+                              border-top: 0;
+                              justify-content: space-around ;
+                              align-items: center ;
+                              a{
+                                color:#585858 ;
+                               font-weight: normal ;
+                               text-align: center ;
+                              }
+                            }
+                          }
+                        }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        flex-basis: pr(145);
+        height:pr(145) ;
+        background-color: #efefef;
+
+        .footer-top{
+          height:pr(70) ;
+          width:100% ;
+          display: flex ;
+          justify-content: space-around ;
+          border: 1px solid #ccc;
+          background-color: #efefef;
+          margin: 0;
+          padding: 0;
+          
+
+          li{
+            list-style: none ;
+            width:33.3333% ;
+            border-right:1px solid #ccc ;
+            text-align: center ;
+            height:100% ;
+            line-height: pr(70) ;
+            a{
+              line-height: pr(70) ;
+            }
+            &:nth-child(3) span{
+              transform: rotate(180deg) ;
+              font-weight: 900 ;
+              color:#000 ;
+            }
+          }
+        }
+    }
+}
